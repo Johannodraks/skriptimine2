@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#programm, mis küsib kasutaja käest kolmnurga külgede väärtused ja arvutab hüpotenuusi.
+echo -n "Sisesta külje a väärtus:"
+read  A
+echo -n "Sisesta külje b väärtus:"
+read B
+echo -n "Sisesta külje c väärtus:"
+read C
+
+P=$ echo $((scale=2; ($A+$B+$C)/2)| bc
+Pindala=`echo "scale=2; sqrt($P*($P-$A)*($P-$B)*($P-$C))"|bc`
+
+echo "A = $A"
+echo "B = $B"
+echo "C = $C"
+echo "Pymbermoot=$P"
+echo "Pindala = $Pindala"
+#
+
