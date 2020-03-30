@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#programm, mis küsib kasutaja käest kolmnurga külgede väärtused ja arvutab hüpotenuusi.
+echo -n "Sisesta külje a väärtus:"
+read  A
+echo -n "Sisesta külje b väärtus:"
+read B
+Bruut=$(($B**2))
+Aruut=$(($A**2))
+Cruut=$(($Bruut+$Aruut))
+Hypotenuus=`echo "scale=2;sqrt($Cruut)"|bc`
+echo "A = $Aruut"
+echo "B = $Bruut"
+echo "C = $Hypotenuus"
+#
